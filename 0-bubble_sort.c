@@ -3,8 +3,10 @@
 #include "sort.h"
 
 /**
- * main - Entry point
- *
+ * bubble_sort - Entry point
+ * desciption: sort the elemnts in assending order
+ * @array: pointer to array
+ * @size: array size
  * Return: Always 0
  */
 
