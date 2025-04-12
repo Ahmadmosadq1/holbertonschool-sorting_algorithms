@@ -10,12 +10,15 @@
  *
  * Return: Pointer to the first element of the created list. NULL on failure
  */
-
 void insertion_sort_list(listint_t **list) {
+    listint_t *current;
+    listint_t *temp;
+    listint_t *key_node;
+    listint_t *print_node;
+    
     if (list == NULL || *list == NULL || (*list)->next == NULL)
         return;
 
-    listint_t *current, *temp, *key_node;
     current = (*list)->next;
 
     while (current != NULL) {
@@ -39,7 +42,7 @@ void insertion_sort_list(listint_t **list) {
             key_node->next = temp;
             temp->prev = key_node;
 
-            listint_t *print_node = *list;
+            print_node = *list;
             while (print_node != NULL) {
                 printf("%d", print_node->n);
                 if (print_node->next != NULL)
